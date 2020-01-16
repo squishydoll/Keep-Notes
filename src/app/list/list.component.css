@@ -60,3 +60,18 @@ aside h3 {
   color: grey;
   line-height: 20px;
 }
+/*For Mobile*/
+@media screen and (min-width: 360px) and (max-width: 767px) {
+  .scrollbar {
+    width: 100%;
+  }
+  aside {
+    padding: 1vh 4vh;
+  }
+  input {
+    width: 87%;
+  }
+  aside h3 {
+    padding: 0;
+  }
+}

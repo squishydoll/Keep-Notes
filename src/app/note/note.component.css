@@ -29,3 +29,10 @@ div * {
 h3 {
   color: #1a405f;
 }
+
+/*For Mobile*/
+@media screen and (min-width: 360px) and (max-width: 767px) {
+  div {
+    padding: 2vh 0;
+  }
+}

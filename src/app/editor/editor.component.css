@@ -42,3 +42,11 @@ input::placeholder,
 textarea::placeholder {
   color: rgb(216, 216, 216);
 }
+
+/*For Mobile*/
+@media screen and (min-width: 360px) and (max-width: 767px) {
+  textarea {
+    width: 80vw;
+    text-align: justify;
+  }
+}
