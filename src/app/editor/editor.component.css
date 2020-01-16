@@ -43,6 +43,10 @@ textarea::placeholder {
   color: rgb(216, 216, 216);
 }
 
+/*For Tablet*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
 /*For Mobile*/
 @media screen and (min-width: 360px) and (max-width: 767px) {
   textarea {

@@ -106,7 +106,10 @@ input[type='checkbox']:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 
 /*For Tablet*/
-@media screen and (min-width: 768px) and (max-width: 767px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .heading {
+    padding-left: 3rem;
+  }
   input[type='checkbox']:checked ~ .wrapper > list {
     width: 30vw;
   }

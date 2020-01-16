@@ -60,6 +60,11 @@ aside h3 {
   color: grey;
   line-height: 20px;
 }
+
+/*For Tablet*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
 /*For Mobile*/
 @media screen and (min-width: 360px) and (max-width: 767px) {
   .scrollbar {
