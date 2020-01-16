@@ -1,0 +1,44 @@
+section {
+  padding: 2vh;
+  color: white;
+  background: #1a405f;
+  height: 70vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100vh;
+}
+form {
+  width: 100vw;
+}
+
+h2 {
+  color: rgb(6, 6, 82);
+}
+
+input[type='text'],
+textarea {
+  color: white;
+  width: 100%;
+  border: none;
+  margin-top: 0;
+  padding: 0 2rem;
+  font-family: 'Rubik';
+  font-size: 1rem;
+  background: none;
+}
+
+textarea {
+  margin-top: 3vh;
+  height: auto;
+  width: 60vw;
+  overflow: auto;
+}
+
+input[type='text'] {
+  font-size: 2rem;
+}
+input::placeholder,
+textarea::placeholder {
+  color: rgb(216, 216, 216);
+}

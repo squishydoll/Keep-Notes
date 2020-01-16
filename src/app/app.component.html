@@ -1,0 +1,24 @@
+<main>
+  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" checked />
+  <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+  </label>
+
+  <header>
+    <div class="head-wrapper">
+      <div class="heading">All Notes</div>
+      <div class="icons">
+        <fa-icon [icon]="faTrash" (click)="editComponent('delete')"></fa-icon>
+        <fa-icon [icon]="faClipboard" (click)="editComponent('add')"></fa-icon>
+      </div>
+    </div>
+  </header>
+  <div class="wrapper">
+    <list></list>
+    <section>
+      <router-outlet></router-outlet>
+    </section>
+  </div>
+</main>

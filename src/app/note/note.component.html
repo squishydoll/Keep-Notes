@@ -1,0 +1,5 @@
+<div (click)="setActive()" [class.active]="active">
+  <h3>{{ title | shorten: 20 }}</h3>
+  <p>{{ content | shorten }}</p>
+  <span>{{ date | date: 'EEEE, MMMM d, y, h:mm a' }}</span>
+</div>

@@ -1,0 +1,21 @@
+<div class="scrollbar">
+  <section>
+    <form [formGroup]="searchForm">
+      <input type="text" formControlName="searchvalue" placeholder="Search" />
+    </form>
+
+    <aside>
+      <ng-container *ngIf="notes.length > 0; else noNoteMsg">
+        <note
+          *ngFor="let note of notes | filter: searchvalue.value"
+          [notesData]="note"
+          [routerLink]="['note', note.id]"
+        >
+        </note>
+      </ng-container>
+      <ng-template #noNoteMsg>
+        <h3>No Notes to display. Create a new note now!</h3>
+      </ng-template>
+    </aside>
+  </section>
+</div>

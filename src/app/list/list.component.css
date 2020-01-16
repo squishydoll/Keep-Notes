@@ -1,0 +1,62 @@
+section {
+  background: white;
+}
+aside {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+input {
+  padding: 0.5vh 0;
+  margin: 0 1rem;
+  margin-top: 2rem;
+  height: 1.5rem;
+  width: 80%;
+  text-indent: 1vw;
+  border: none;
+  font-size: 1.1em;
+  border-bottom: 2px solid #1a405f;
+}
+
+input::placeholder {
+  color: darkgray;
+}
+
+.scrollbar {
+  float: left;
+  margin-bottom: 25px;
+  overflow-y: auto;
+  width: 25vw;
+  height: 90vh;
+  scrollbar-width: thin;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 1em;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+aside {
+  padding: 1vw 0;
+}
+aside h3 {
+  padding: 0 2vw;
+  color: grey;
+  line-height: 20px;
+}
