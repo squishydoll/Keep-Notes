@@ -7,7 +7,9 @@
     <aside>
       <ng-container *ngIf="notes.length > 0; else noNoteMsg">
         <note
-          *ngFor="let note of notes | filter: searchvalue.value"
+          [clickedIndex]="clickedIndex"
+          [myIndex]="i + 1"
+          *ngFor="let note of notes | filter: searchvalue.value; index as i"
           [notesData]="note"
           [routerLink]="['note', note.id]"
         >

@@ -12,12 +12,23 @@ h1 {
 
 /*For Tablet*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+  div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+    padding: 2vh;
+  }
 }
 
 /*For Mobile*/
 @media screen and (min-width: 360px) and (max-width: 767px) {
   h1 {
     font-size: 1.5rem;
+    padding: 4vw;
   }
   div {
     text-align: center;

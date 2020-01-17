@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,7 +23,7 @@ import { FilterPipe } from './_collaborators/filter.pipe';
     ShortenPipe,
     FilterPipe
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FontAwesomeModule],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FontAwesomeModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })

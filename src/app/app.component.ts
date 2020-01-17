@@ -14,6 +14,7 @@ export class AppComponent {
   noteid: number;
   faTrash = faTrashAlt;
   faClipboard = faFileAlt;
+  notesOpen: boolean;
   constructor(private dataService: DataService, private router: Router) {
     localStorage.removeItem('notes');
   }
@@ -23,6 +24,10 @@ export class AppComponent {
     //create localStorage;
     this.dataLength = 0;
     this.dataService.notifyNoteId.subscribe(id => (this.noteid = id));
+
+    this.dataService.notifyNoteSelection.subscribe(() => {
+      if (window.innerWidth < 767) this.notesOpen = false;
+    });
   }
 
   editComponent(event: string) {

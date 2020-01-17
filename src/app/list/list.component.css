@@ -63,6 +63,14 @@ aside h3 {
 
 /*For Tablet*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+  .scrollbar {
+    width: 32vw;
+  }
+  input {
+    width: 100%;
+    height: 2rem;
+    font-size: 1.2rem;
+  }
 }
 
 /*For Mobile*/
@@ -70,13 +78,10 @@ aside h3 {
   .scrollbar {
     width: 100%;
   }
-  aside {
-    padding: 1vh 4vh;
-  }
   input {
     width: 87%;
   }
   aside h3 {
-    padding: 0;
+    padding: 10vw;
   }
 }

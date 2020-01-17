@@ -9,8 +9,10 @@ export class DataService {
   notes: any[];
   notifyNoteUpdation: Subject<any>;
   notifyNoteId: Subject<number>;
+  notifyNoteSelection: Subject<any>;
 
   constructor() {
+    this.notifyNoteSelection = new Subject();
     this.notifyNoteUpdation = new Subject();
     this.notifyNoteId = new Subject();
     this.currentNote = {};

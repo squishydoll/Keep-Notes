@@ -9,6 +9,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class ListComponent implements OnInit {
   searchForm: FormGroup;
+  clickedIndex;
   notes: any[];
   constructor(private dataService: DataService) {}
   ngOnInit() {
@@ -20,6 +21,9 @@ export class ListComponent implements OnInit {
       searchvalue: new FormControl('')
     });
 
+    this.dataService.notifyNoteSelection.subscribe(value => {
+      this.clickedIndex = value;
+    });
     this.valueChangesMonitoring();
   }
 

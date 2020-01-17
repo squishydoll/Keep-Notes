@@ -1,4 +1,12 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  Output,
+  EventEmitter,
+  SimpleChanges,
+  OnChanges
+} from '@angular/core';
 import { DataService } from '../_collaborators/data.service';
 
 @Component({
@@ -6,28 +14,36 @@ import { DataService } from '../_collaborators/data.service';
   templateUrl: './note.component.html',
   styleUrls: ['./note.component.css']
 })
-export class NoteComponent implements OnInit {
+export class NoteComponent implements OnInit, OnChanges {
   @Input() notesData;
   id: number;
   active: Boolean;
-  lastActiveID: number;
+
+  @Input() myIndex;
+  @Input() clickedIndex;
+
+  @Output() noteEmitter = new EventEmitter();
 
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.lastActiveID = this.id;
-    this.active = false;
     this.dataService.notifyNoteId.subscribe(noteId => {
-      if (this.lastActiveID != noteId) {
-        this.active = false;
-        this.lastActiveID = noteId;
-      }
       this.id = noteId;
     });
   }
 
   setActive() {
     this.active = true;
+    this.dataService.notifyNoteSelection.next(this.myIndex);
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    this.clickedIndex = changes['clickedIndex'].currentValue;
+    if (this.myIndex == this.clickedIndex) {
+      this.active = true;
+    } else {
+      this.active = false;
+    }
   }
   get content() {
     return this.dataService.getSingleNote(this.notesData['id']).content;
