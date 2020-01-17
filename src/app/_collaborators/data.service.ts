@@ -16,11 +16,11 @@ export class DataService {
     this.notifyNoteUpdation = new Subject();
     this.notifyNoteId = new Subject();
     this.currentNote = {};
-    this.notes = [{}];
+    this.notes = JSON.parse(localStorage.getItem('notes'));
   }
 
   getNotesData() {
-    return of(this.notes);
+    return this.notes;
   }
 
   addNewNote(note) {
@@ -56,7 +56,7 @@ export class DataService {
 
   getSingleNote(noteId) {
     this.notes = JSON.parse(localStorage.getItem('notes'));
-    if (!this.notes) {
+    if (!noteId) {
       return {};
     }
     this.currentNote = this.notes.find(el => el.id == noteId);

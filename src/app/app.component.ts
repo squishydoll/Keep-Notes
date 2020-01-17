@@ -15,9 +15,7 @@ export class AppComponent {
   faTrash = faTrashAlt;
   faClipboard = faFileAlt;
   notesOpen: boolean;
-  constructor(private dataService: DataService, private router: Router) {
-    localStorage.removeItem('notes');
-  }
+  constructor(private dataService: DataService, private router: Router) {}
 
   ngOnInit() {
     this.router.navigate(['/'], { replaceUrl: true });

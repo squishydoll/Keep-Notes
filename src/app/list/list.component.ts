@@ -14,6 +14,7 @@ export class ListComponent implements OnInit {
   constructor(private dataService: DataService) {}
   ngOnInit() {
     this.notes = [];
+    this.notes = this.dataService.notes;
     this.dataService.notifyNoteUpdation.subscribe(notes => {
       this.notes = notes;
     });
