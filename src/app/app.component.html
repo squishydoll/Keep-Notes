@@ -16,8 +16,9 @@
     <div class="head-wrapper">
       <div class="heading">All Notes</div>
       <div class="icons">
-        <fa-icon [icon]="faTrash" (click)="editComponent('delete')"></fa-icon>
-        <fa-icon [icon]="faClipboard" (click)="editComponent('add')"></fa-icon>
+        <fa-icon [icon]="faTrash" (click)="editComponent('delete')" title="Delete Note"></fa-icon>
+
+        <fa-icon [icon]="faClipboard" (click)="editComponent('add')" title="Add Note"></fa-icon>
       </div>
     </div>
   </header>

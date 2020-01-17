@@ -24,14 +24,9 @@ export class ListComponent implements OnInit {
     this.dataService.notifyNoteSelection.subscribe(value => {
       this.clickedIndex = value;
     });
-    this.valueChangesMonitoring();
   }
 
   get searchvalue() {
     return this.searchForm.controls['searchvalue'];
-  }
-
-  valueChangesMonitoring() {
-    this.searchvalue.valueChanges.subscribe(changedValue => {});
   }
 }
