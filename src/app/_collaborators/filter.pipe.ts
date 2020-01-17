@@ -18,12 +18,7 @@ export class FilterPipe implements PipeTransform {
           date: note.date
         };
       })
-      .filter(
-        val =>
-          val.title.includes(searchVal) ||
-          val.content.includes(searchVal) ||
-          val.date.toString().includes(searchVal)
-      );
+      .filter(val => val.title.includes(searchVal) || val.content.includes(searchVal));
     return output;
   }
 }
